@@ -15,4 +15,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: whoami
+          script: |
+            docker stop sundar
+            docker rm sundar
+            docker build -t sundar .
+            docker run -d --name sundar -p 9000:9000 sundar
