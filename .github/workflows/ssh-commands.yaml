@@ -79,5 +79,6 @@ jobs:
 
             docker stop sundar || true
             docker rm sundar || true
+            docker rmi docker.io/sundaraswal/sundar:master || true
             docker run -d --name sundar -p 9000:9000 docker.io/sundaraswal/sundar:master
       
