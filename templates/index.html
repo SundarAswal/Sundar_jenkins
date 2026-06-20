@@ -3,16 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenkins testing</title>
+    <title>CI/CD Pipeline</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #00e6e6;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-top: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(0, 150, 255, 0.6);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #00c6ff;
+            }
+            to {
+                box-shadow: 0 0 25px #00c6ff, 0 0 50px #0072ff;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <p> <h3>Welcome to CircleCI! and jenkins!</h3></p>
-    <p> <h3>Webhooks being used for CI/CD</h3></p>
+    <div class="container">
+        <h1>🚀 CI/CD Pipeline Live</h1>
+        <h2>Welcome to CircleCI & Jenkins</h2>
+        <p>Automated build, test and deployment</p>
+        <p>Powered by Webhooks ⚡</p>
+
+        <div class="badge">
+            ✅ Deployment Successful
+        </div>
+    </div>
 </body>
-<style>
-    body {
-        background-color: black;
-        color: yellow;
-    }
-</style>
 </html>
